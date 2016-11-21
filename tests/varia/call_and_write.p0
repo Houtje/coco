@@ -1,0 +1,12 @@
+program a;
+
+procedure foo(bar: integer; baz: real; qux, quux, fred, barny: integer);
+
+begin
+  writeinteger(bar);
+  writereal(baz)
+end;
+
+begin
+  foo(3, 3.5, 1, 2,3,4)
+end.

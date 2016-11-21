@@ -1,0 +1,51 @@
+#!/bin/bash
+
+SPIM=spim
+COMP=./comp
+
+# Fix globs that match nothing
+shopt -s nullglob
+
+function main
+{
+	local file
+	local f_error=0;
+	local f_ok=0;
+
+	for file in ../tests/*/*.p0
+	do
+		comptest $file
+	done
+}
+
+function comptest
+{
+	local file=$1
+	echo "Testing $file ... "
+
+	local erroroutput=$($COMP < $1 2>&1 > /dev/null)
+
+	if [ -n "$erroroutput" ]
+	then
+		echo "==========="
+		echo "$erroroutput"
+		echo "==========="
+	fi
+
+	return 0
+}
+
+function calculate_percentage
+{
+	local result
+	if [ "$2" -eq 0 ]
+	then
+		result="100.0"
+	else
+		result=$(echo "scale=2; ($1 * 100) / $2" | bc)
+	fi
+
+	echo "$result %"
+}
+
+main

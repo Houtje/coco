@@ -1,0 +1,14 @@
+program commonsubexpr;
+
+var a : integer;
+
+function calc(a,b,c: integer; d,e,f: real): real;
+
+begin
+	calc := ((a+b+c)*(a+b+c)+((a*d)+(a*d)*(e * f))+(a+b+c))/((a*d)+(a+b+c)) 
+end;
+
+begin
+	a := readinteger;
+	writereal(calc(a,2,3,1.0,2.0,3.0))
+end.

@@ -1,0 +1,18 @@
+program towel;
+
+var
+  zaphod,
+  breeblebox,
+  gurble: real;
+
+function guide(arthur, ford: integer): integer;
+
+begin
+  guide := arthur + ford
+end;
+
+begin
+  { error: guide is of type   integer x integer -> integer,
+    not   real x real -> real }
+  gurble := guide(zaphod, breeblebox)
+end.

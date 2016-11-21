@@ -1,0 +1,14 @@
+program donald;
+
+var
+  fred, barney: integer;
+
+procedure kwak(katrien: real; dagobert: integer);
+
+begin
+end;
+
+begin
+  { integer to real coercion }
+  kwak(fred,barney)
+end.

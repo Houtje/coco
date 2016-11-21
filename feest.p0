@@ -1,0 +1,12 @@
+program feest;
+
+var a: integer;
+
+function increase(x: integer) : integer;
+begin
+    x := x + 1
+end;
+
+begin
+    a := increase(41)
+end.

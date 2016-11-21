@@ -1,0 +1,11 @@
+program a;
+
+procedure b(c,d: integer);
+
+begin
+  writeinteger(e)
+end;
+
+begin
+  writeinteger(3)
+end.

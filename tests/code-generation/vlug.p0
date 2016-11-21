@@ -1,0 +1,5 @@
+program vlug;
+
+begin
+  writereal(23)
+end.

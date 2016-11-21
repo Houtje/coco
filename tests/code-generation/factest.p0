@@ -1,0 +1,32 @@
+program hoop;
+
+var
+  a: integer;
+
+function plus(a, b: integer): integer;
+
+begin
+  plus := a + b
+end;
+
+function fac(i: integer): integer;
+
+var
+  hlp: integer;
+
+begin
+  if (i = 0) then
+    fac := 1
+  else 
+  begin
+    hlp := fac(i-1);
+    writeinteger(i);
+    writeinteger(hlp);
+    fac := i * hlp
+  end
+end;
+
+begin
+  a := fac(plus(3,2));
+  writeinteger(a)
+end.

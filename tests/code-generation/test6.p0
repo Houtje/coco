@@ -1,0 +1,13 @@
+program testif;
+
+var 
+  foo, bar: integer;
+
+begin
+  foo := 42;
+  if (foo <> 42) then 
+    bar := 255
+  else
+    bar := 256;
+  writeinteger(bar)
+end.

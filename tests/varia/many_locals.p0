@@ -1,0 +1,33 @@
+program bokmal;
+
+procedure noe;
+var
+  en, to, tre, fire, fem, seks, sju, atte, ni, ti, elleve, tolv, tretten, fjorten, femten: integer;
+var
+  mange: real;
+
+begin
+  en := 1;
+  to := 2;
+  tre := 3;
+  fire := 4;
+  fem := 5;
+  seks := 6;
+  sju := 7;
+  atte := 8;
+  ni := 9;
+  ti := 10;
+  elleve := 11;
+  tolv := 12;
+  tretten := 13;
+  fjorten := 14;
+  femten := 15;
+
+	mange := en + to + tre + fire + fem + seks + sju + atte + ni + ti + elleve + tolv + tretten + fjorten + femten;
+
+	writereal(mange)	
+end;
+
+begin
+	noe
+end.

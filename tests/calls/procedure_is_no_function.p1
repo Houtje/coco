@@ -1,0 +1,13 @@
+program snafu;
+
+var foo: integer;
+
+procedure proc(a: integer);
+
+begin
+  a := 3
+end;
+
+begin
+  foo := proc(42)
+end.

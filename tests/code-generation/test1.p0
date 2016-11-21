@@ -1,0 +1,17 @@
+program serieus;
+
+var
+  algol: integer;
+
+function achtenvijftig: integer;
+
+begin
+  achtenvijftig := 58
+end;
+
+begin
+  algol := achtenvijftig;
+  writeinteger(algol);
+  algol := algol + 2;
+  writeinteger(algol)
+end.

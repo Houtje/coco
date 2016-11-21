@@ -1,0 +1,8 @@
+program puppetmasters;
+
+var
+  big, big2: real;
+
+begin
+  writereal(big+big2)
+end.

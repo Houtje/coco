@@ -1,0 +1,174 @@
+Doing test ./tests/wrongsyntax/notboollike1.p1
+Succeeded
+Doing test ./tests/wrongsyntax/notboollike2.p1
+Succeeded
+Doing test ./tests/calls/too_many_parameters4.p1
+Succeeded
+Doing test ./tests/calls/type_problem_with_result.p1
+Succeeded
+Doing test ./tests/calls/wrong_types1.p1
+Succeeded
+Doing test ./tests/calls/wrong_types2.p1
+Succeeded
+Doing test ./tests/calls/correct_call.p0
+Succeeded
+Doing test ./tests/calls/not_enough_parameters.p1
+Succeeded
+Doing test ./tests/calls/procedure_is_no_function.p1
+Succeeded
+Doing test ./tests/calls/result_discarded.p1
+Succeeded
+Doing test ./tests/calls/too_many_parameters1.p1
+Succeeded
+Doing test ./tests/calls/too_many_parameters2.p1
+Succeeded
+Doing test ./tests/calls/too_many_parameters3.p1
+Succeeded
+Doing test ./tests/semantic-checks/proc_as_function.p1
+Succeeded
+Doing test ./tests/semantic-checks/read_assign.p1
+Succeeded
+Doing test ./tests/semantic-checks/typemismatch1.p1
+Succeeded
+Doing test ./tests/semantic-checks/typemismatch4.p1
+Succeeded
+Doing test ./tests/semantic-checks/typemismatch3.p1
+Succeeded
+Doing test ./tests/semantic-checks/typemismatch2.p1
+Succeeded
+Doing test ./tests/semantic-checks/function_assignment_not_allowed.p1
+Succeeded
+Doing test ./tests/semantic-checks/dirty.p1
+Succeeded
+Doing test ./tests/optimize/commonsubexpr.p0
+Succeeded
+Doing test ./tests/optimize/deadcode.p0
+Succeeded
+Doing test ./tests/optimize/register.p0
+Succeeded
+Doing test ./tests/optimize/strength.p0
+Succeeded
+Doing test ./tests/varia/call_and_write.p0
+Succeeded
+Doing test ./tests/varia/division.p1
+Succeeded
+Doing test ./tests/varia/expressions.p0
+Succeeded
+Doing test ./tests/varia/many_locals.p0
+Succeeded
+Doing test ./tests/varia/no_real_in_boolean_expr.p1
+Succeeded
+Doing test ./tests/varia/sign2.p0
+Succeeded
+Doing test ./tests/varia/var_is_not_procedure.p1
+Succeeded
+Doing test ./tests/varia/veelvariabelen.p0
+Succeeded
+Doing test ./tests/varia/writes.p0
+Succeeded
+Doing test ./tests/varia/yet_another_call.p0
+Succeeded
+Doing test ./tests/varia/bitwise.p0
+Succeeded
+Doing test ./tests/varia/bitwise_err.p1
+Succeeded
+Doing test ./tests/varia/boolean_condition.p0
+Succeeded
+Doing test ./tests/declarations/redeclaration1.p1
+Succeeded
+Doing test ./tests/declarations/redeclaration2.p1
+Succeeded
+Doing test ./tests/declarations/undeclared1.p1
+Succeeded
+Doing test ./tests/declarations/undeclared2.p1
+Succeeded
+Doing test ./tests/declarations/undeclared3.p1
+Succeeded
+Doing test ./tests/declarations/builtins1.p1
+Succeeded
+Doing test ./tests/declarations/redeclaration3.p1
+Succeeded
+Doing test ./tests/declarations/redeclaration4.p1
+Succeeded
+Doing test ./tests/declarations/redeclaration6.p1
+Succeeded
+Doing test ./tests/declarations/builtins2.p1
+Succeeded
+Doing test ./tests/declarations/lookup.p0
+Succeeded
+Doing test ./tests/declarations/redeclaration5.p1
+Succeeded
+Doing test ./tests/declarations/program_is_procedure_name.p1
+Succeeded
+Doing test ./tests/code-generation/test2.p0
+Succeeded
+Doing test ./tests/code-generation/plus2.p0
+Succeeded
+Doing test ./tests/code-generation/plus3.p0
+Succeeded
+Doing test ./tests/code-generation/register.p0
+Succeeded
+Doing test ./tests/code-generation/tempnames.p0
+Succeeded
+Doing test ./tests/code-generation/fibo.p0
+Succeeded
+Doing test ./tests/code-generation/fibo2.p0
+Succeeded
+Doing test ./tests/code-generation/fibo3.p0
+Succeeded
+Doing test ./tests/code-generation/test3.p0
+Succeeded
+Doing test ./tests/code-generation/beuh.p0
+Succeeded
+Doing test ./tests/code-generation/factest.p0
+Succeeded
+Doing test ./tests/code-generation/temps1.p0
+Succeeded
+Doing test ./tests/code-generation/temps2.p0
+Succeeded
+Doing test ./tests/code-generation/plus.p0
+Succeeded
+Doing test ./tests/code-generation/test4.p0
+Succeeded
+Doing test ./tests/code-generation/test5.p0
+Succeeded
+Doing test ./tests/code-generation/test6.p0
+Succeeded
+Doing test ./tests/code-generation/test7.p0
+Succeeded
+Doing test ./tests/code-generation/testio1.p0
+Succeeded
+Doing test ./tests/code-generation/vlug.p0
+Succeeded
+Doing test ./tests/code-generation/test1.p0
+Succeeded
+Doing test ./tests/simple/correct8.p0
+Succeeded
+Doing test ./tests/simple/correct1.p0
+Succeeded
+Doing test ./tests/simple/correct2.p0
+Succeeded
+Doing test ./tests/simple/correct3.p0
+Succeeded
+Doing test ./tests/simple/correct4.p0
+Succeeded
+Doing test ./tests/simple/correct5.p0
+Succeeded
+Doing test ./tests/simple/correct6.p0
+Succeeded
+Doing test ./tests/simple/correct7.p0
+Succeeded
+Doing test ./tests/simple/correct9.p0
+Succeeded
+Doing test ./plus.p0
+Succeeded
+Doing test ./test.p0
+Succeeded
+Doing test ./feest.p0
+Succeeded
+
+
+#tests: 84
+#successes: 84
+#failures: 0
+Success rate: 100.00 %

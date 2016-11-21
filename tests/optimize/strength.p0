@@ -1,0 +1,11 @@
+program strength;
+
+var
+	a,b,c : integer;
+ 
+begin
+	a := 5 * 0;
+	b := 1 * 1 * 1 * 1 * 1;
+	c := a * b;
+	writeinteger(c)
+end.

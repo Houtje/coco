@@ -1,0 +1,5 @@
+program ikweetgeentitelmeer;
+
+begin
+  writeinteger(a)
+end.

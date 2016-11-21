@@ -1,0 +1,80 @@
+#!/usr/bin/perl -w
+use strict; no strict 'vars';
+
+########################################################################
+# Configuration options.
+
+# Your compiler
+$compiler = './comp';
+
+# Name of the log file.
+$log = 'test-runs-log';
+
+# Verbose log (includes output for succesful runs)?
+$verbose = 0;
+
+# List of tops of directory trees with tests.
+$testdir = '../tests/';
+$dirfile = $testdir.'dirs';
+
+########################################################################
+
+
+$me = `whoami`;
+chomp($me);
+$templog = '/tmp/' . $me . '-log';
+
+system("rm -f $log");
+
+if (! -x $compiler) {
+  die ("Cannot execute \"$compiler\"");
+}
+
+$success = 0;
+$failure = 0;
+
+$| = 1;
+open(TESTS, "find `cat $dirfile` -type f -name '*.p?'  2> /dev/null |") or die;
+undef $/;
+$_ = <TESTS>;
+@test = split;
+close(TESTS);
+
+foreach $test (@test) {
+  if (! -r $test) {
+    print STDERR "Skipping unreadable test $test\n";
+  }
+
+  print STDERR "Doing test $test\n";
+  system("echo Doing test $test >> $log");
+
+  $test =~ m/^.*\.p([01])$/;
+  $expected = 0;
+
+  # Call the compiler; all output to $templog
+  system("valgrind $compiler < $test 2>&1 | grep 'no leaks are possible\\|definitely lost: 0' >/dev/null");
+
+  $exitval = $? >> 8;
+  if ($exitval == $expected) {
+    $success++;
+    system("echo Succeeded >> $log");
+    if ($verbose) {
+      system("cat $templog >> $log");
+    }
+  } else {
+    print "Failed test \"$test\" with exitcode $exitval \n";
+    system("cat $templog >> $log");
+    system("echo Failed test $test with exitcode $exitval >> $log");
+    $failure++;
+  }
+}
+
+open(RES, "| tee -a $log");
+print RES "\n\n";
+print RES "#tests: ", $success + $failure, "\n";
+print RES "#successes: $success\n";
+print RES "#failures: $failure\n";
+printf RES "Success rate: %3.2f %%\n", (100 * $success / ($success + $failure));
+close(RES);
+
+exit ($failure == 0);

@@ -1,0 +1,70 @@
+#
+# Makefile for assignment 3 of the Compiler Construction course.
+# LIACS, Leiden University.
+#
+
+CC        = @CC@
+CXX       = @CXX@
+
+WARNINGS  = -Wall -ansi
+OTHERS    = -g
+DEFINES   = -DDEBUG
+IDIRS     = -I.
+
+CFLAGS    = $(WARNINGS) $(OTHERS) $(DEFINES) $(IDIRS)
+LFLAGS    = 
+YFLAGS    = --defines --debug --verbose
+LDFLAGS   = -g
+LOADLIBS  = @LEXLIB@ -lm
+
+#
+# If you want to add another C/C++ file to the compiler, add the name of the
+# corresponding .o file to the OBJFILES macro below in Makefile.in:
+#
+OBJFILES  = debug.o main.o ICGenerator.o
+OBJDIR    = gen/
+OBJS      = $(addprefix $(OBJDIR),$(OBJFILES))
+
+# Precompiled object files
+POBJFILES = types.o SyntaxTree.o Node.o Symbol.o SymbolTable.o Scope.o \
+            IntermediateCode.o IStatement.o IOperand.o IOperator.o
+POBJDIR   = @POBJDIR@
+POBJS     = $(addprefix $(POBJDIR),$(POBJFILES))
+
+IMPORTANT	= comp.[hly] *.h *.c *.cc \
+		  Makefile
+
+.PHONY: all first clean backup dirs showdeps
+
+all: Makefile comp
+
+# To be executed before the very first build
+first: dirs
+
+Makefile: Makefile.in
+	./config.status
+
+# Dependency stuff
+comp: $(POBJDIR)y.tab.o $(POBJDIR)lex.yy.o $(OBJS) $(POBJS)
+	$(CXX) $(LDFLAGS) -o $@ $^ $(LOADLIBS)
+
+clean:	
+	rm -f $(OBJDIR)*.o comp \
+	    `find . -name core -o -name \*\.bak`
+
+backup:
+	tar cfz ../CoCo-`date +'%y%m%d-%H%M'`.tar.gz $(IMPORTANT)
+
+dirs:
+	mkdir gen
+
+# Show dependencies between .c files
+showdeps:
+	$(CXX) -MM *.c *.cc
+
+# Dependency stuff
+$(OBJDIR)%.o: %.c
+	$(CXX) $(CFLAGS) -c -o $@ $<
+
+$(OBJDIR)%.o: %.cc
+	$(CXX) $(CFLAGS) -c -o $@ $<

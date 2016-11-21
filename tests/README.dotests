@@ -1,0 +1,19 @@
+The 'dotests' script is a Perl script. Therefore you need to have Perl
+installed. In case of failure, make sure that the path to the Perl binary is
+correct (which can be found in the first line of the script).
+
+Inside the script are some variables that control the behaviour of the script.
+
+The script is preconfigured to run in the directory in which you build
+your compiler binary. The 'tests' directory with all other files needs
+to be placed one level above that build directory.
+
+The script expects a return value of the compiler:
+  0 for a correct program
+  1 for an incorrect program
+Other values are considered as a failure. For example, a segmentation fault 
+will always result in a non-zero value.
+
+
+(original text by Paul van der Mark,
+translated & adapted by Sven van Haastregt)

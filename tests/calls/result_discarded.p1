@@ -1,0 +1,14 @@
+{ in C the result of function can be discarded (e.g. often used with printf),
+  this is not allowed in pascal } 
+
+program snafu;
+
+function fun(a: integer): integer;
+
+begin
+  a := 3
+end;
+
+begin
+  fun(42)
+end.

@@ -1,0 +1,18 @@
+program smerig;
+
+function plus(a, b: integer): integer;
+begin
+  plus := a+b
+end;
+
+function fac(a: integer): integer;
+begin
+  if (a = 0) then
+    fac := 1
+  else
+    fac := a*fac(a- 1)
+end;
+
+begin
+  writeinteger(fac(plus(3,2)))
+end.

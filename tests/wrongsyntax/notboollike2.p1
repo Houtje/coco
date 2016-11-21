@@ -1,0 +1,12 @@
+program yabt;
+
+var
+  ach,
+  weeh: integer;
+
+begin
+  if ach then
+    writeinteger(ach)
+  else
+    writeinteger(weeh)
+end.

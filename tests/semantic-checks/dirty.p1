@@ -1,0 +1,35 @@
+program fibonee;
+
+var
+  hlp: integer;
+
+function fibo(i: integer): integer;
+
+begin
+  if (i <= 1) then
+    fibo := 1
+  else
+    fibo := fibo(i-1) + fibo(i-2)
+end;
+
+function plus(i: integer): integer;
+
+begin
+  plus := i + 1
+end;
+
+function geennaam(i: integer): integer;
+
+begin
+  if (geennaam > 0) then { geennaam is used as function call without parameter}
+    geennaam := 1 + geennaam(i-1)
+  else
+    geennaam := 0
+end;
+
+begin
+  hlp := fibo(7);
+  writeinteger(hlp);
+  writeinteger(plus(4));
+  writeinteger(geennaam(6))
+end.

@@ -1,0 +1,9 @@
+program assignment;
+
+var r : integer;
+var b : real;
+
+begin
+  r := 28;
+  b := 12
+end.

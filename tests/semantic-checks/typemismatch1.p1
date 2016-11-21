@@ -1,0 +1,10 @@
+{ This program is correct wrt the context-sensitive grammar;
+  it should fail the semantic tests }
+program blaah;
+
+var 
+  a: integer;
+
+begin
+  a := 3.5
+end.

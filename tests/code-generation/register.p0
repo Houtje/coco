@@ -1,0 +1,78 @@
+{ De procedure foo is een leaf-functie, alle lokale parameters kunnen daarom
+  in registers worden gestopt. Vanwege de vrij korte levensduur van de meeste
+  hoeven dit niet eens veel registers te zijn. Dit is echter een pittige 
+  optimalisatie, verspil dus niet te veel tijd hierop }
+program register;
+
+
+function sum(a,b : integer) : integer;
+begin
+	sum := a + b
+end;
+
+procedure foo;
+var
+	totaal,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z : integer;
+begin
+	totaal := sum(0,0);
+	a := 1;
+	totaal := totaal+a;
+	b := 2;
+	totaal := totaal+b;
+	c := 3;
+	totaal := totaal+c;
+	d := 4;
+	totaal := totaal+d;
+	e := 5;
+	totaal := totaal+e;
+	f := 6;
+	totaal := totaal+f;
+	g := 7;
+	totaal := totaal+g;
+	h := 8;
+	totaal := totaal+h;
+	i := 9;
+	totaal := totaal+i;
+	j := 10;
+	totaal := totaal+j;
+	k := 12;
+	totaal := totaal+k;
+	l := 14;
+	totaal := totaal+l;
+	m := 16;
+	totaal := totaal+m;
+	n := 18;
+	totaal := totaal+n;
+	o := 22;
+	totaal := totaal+o;
+	p := 23;
+	totaal := totaal+p;
+	q := 24;
+	totaal := totaal+q;
+	r := 25;
+	totaal := totaal+r;
+	s := 26;
+	totaal := totaal+s;
+	t := 27;
+	totaal := totaal+t;
+	u := 28;
+	totaal := totaal+u;
+	v := 29;
+	totaal := totaal+v;
+	w := 30;
+	totaal := totaal+w;
+	x := 40;
+	totaal := totaal+x;
+	y := 42;
+	totaal := totaal+y;
+	z := 44;
+	totaal := totaal+z;
+	totaal := totaal+a;
+	totaal := totaal+k;
+
+	writeinteger(totaal)	
+end;
+
+begin
+	foo
+end.

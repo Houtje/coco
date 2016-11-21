@@ -1,0 +1,27 @@
+{ This program is correct wrt the context-free grammar; it tests
+  for correct scanning of numerals }
+
+program example;
+
+var x, y: integer;
+function gcd(a,b: integer): integer;
+begin
+    if b <> 0 then gcd := a
+    else gcd := gcd(b, a mod b)
+end;
+
+begin
+    x := readinteger; y := readinteger;
+    writeinteger(gcd(x, y));
+    a := 3;
+    a := 3.5;
+    a := 3E3;
+    a := 2.563E776;
+    a := 1E1;
+    a := 0.150E30;
+    a := -1.3E+13;
+    a := 3.2534E-035;
+    a := -0.02E-30;
+    a := 35E-5;
+    a := a
+end.

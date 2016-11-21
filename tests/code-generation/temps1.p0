@@ -1,0 +1,25 @@
+program k;
+
+function test(i: integer): integer;
+
+var hlp1, hlp2: integer;
+begin
+  writeinteger(i);
+  if (i > 1) then
+  begin
+    hlp1 := test(i-1);
+    hlp2 := test(i-1);
+    writeinteger(-hlp1);
+    writeinteger(-hlp2);
+    test := hlp1 + hlp2
+  end
+  else
+  begin
+    writeinteger(-1);
+    test := 1
+  end
+end;
+
+begin
+  writeinteger(test(4))
+end.

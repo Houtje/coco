@@ -1,0 +1,15 @@
+program deadcode;
+
+var
+  test,a,b,t: integer;
+ 
+begin
+  test := 0;
+  a := 4;
+  if (test = 1) then
+  begin
+	a := 1;
+	b := 5
+  end;
+  writeinteger(a)
+end.

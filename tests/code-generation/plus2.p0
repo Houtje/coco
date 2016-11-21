@@ -1,0 +1,19 @@
+program calculatortje;
+
+var
+  fred,
+  barney: real;
+
+function plusr(wilma, betty: real): real;
+
+begin
+  plusr := wilma + betty
+end;
+
+begin
+  fred := readreal;
+  barney := readreal;
+  writereal(fred);
+  writereal(barney);
+  writereal(plusr(fred, barney))
+end.

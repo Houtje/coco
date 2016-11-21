@@ -1,0 +1,12 @@
+program weil;
+
+var 
+  johny: integer;
+ 
+begin
+  johny := 10;
+  while (johny > 0) do
+  begin
+    johny := johny - 1
+  end
+end.

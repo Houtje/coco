@@ -1,0 +1,16 @@
+program blaah;
+
+var
+  glob: integer;
+
+procedure proc;
+var loc: integer;
+begin
+  loc := 23;
+  glob := loc
+end;
+
+begin
+  proc;
+  writeinteger(glob)
+end.

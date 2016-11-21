@@ -1,0 +1,14 @@
+program testio;
+
+var
+  fnord: integer;
+var
+  cat: real;
+
+begin
+  fnord := readinteger;
+  writeinteger(fnord);
+
+  cat := readreal;
+  writereal(cat)
+end.

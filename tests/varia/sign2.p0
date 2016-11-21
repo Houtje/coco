@@ -1,0 +1,11 @@
+program a;
+
+var
+  foo,bar,i: integer;
+
+begin
+  if (foo > -3) then
+    writeinteger(foo)
+  else
+    writeinteger(bar)
+end.

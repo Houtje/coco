@@ -1,0 +1,23 @@
+{ This program is correct wrt the context-free grammar;
+  however, it should reject the function name 'readreal'.
+}
+
+program builtins;
+
+var
+  r,i : integer;
+
+function readreal: real;
+  var d : real;
+begin
+  readreal := 42.0
+end;
+
+begin
+  r := 42;
+  i := 21;
+  r := readreal
+end
+
+
+.

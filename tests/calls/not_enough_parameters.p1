@@ -1,0 +1,18 @@
+program towel;
+
+var
+  zaphod,
+  breeblebox: integer;
+
+function guide(arthur, ford: integer): integer;
+
+begin
+  guide := arthur + ford
+end;
+
+begin
+  { error: not enough parameters
+    guide: integer x integer -> integer
+    call: integer -> integer }
+  breeblebox := guide(zaphod)
+end.

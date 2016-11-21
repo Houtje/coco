@@ -1,0 +1,9 @@
+program veelvariabelen;
+
+var
+  ron, is, aan, het, testen : integer;
+
+begin
+  ron := is;
+  aan := testen
+end.

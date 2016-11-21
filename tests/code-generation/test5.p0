@@ -1,0 +1,14 @@
+program diep;
+
+var
+  c: integer;
+
+procedure proc1(parm: integer);
+
+begin
+  c := parm + 1
+end;
+
+begin
+  proc1(64)
+end.

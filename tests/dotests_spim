@@ -1,0 +1,90 @@
+#!/bin/bash
+
+SPIM=spim
+COMP=./comp
+
+# Fix globs that match nothing
+shopt -s nullglob
+
+function main
+{
+	local file
+	local f_error=0;
+	local f_ok=0;
+
+	for file in ../tests/*/*.p0
+	do
+		comptest $file
+		result=$?
+		f_error=$(( $f_error + $result ))
+		f_ok=$(( $f_ok + 1 - $result ))
+	done
+
+	local f_total=$(( $f_ok + $f_error ))
+
+	echo ""
+	echo "Total : $f_total"
+	echo "Ok    : $f_ok"
+	echo "Error : $f_error"
+	echo -n "Result: "
+	calculate_percentage $f_ok $f_total
+
+	if [ "$f_ok" -gt "0" ]
+	then
+		echo ""
+		final_test
+	fi
+}
+
+function comptest
+{
+	local file=$1
+	echo -n "Testing $file ... "
+
+	compile $file
+	local erroroutput=$(yes 0 | $SPIM -file out.s 2>&1 > /dev/null)
+	rm out.s
+
+	if [ -n "$erroroutput" ]
+	then
+		echo "Error!"
+		echo "==========="
+		echo "$erroroutput"
+		echo "==========="
+		return 1
+	fi
+
+	echo "Ok"
+	return 0
+}
+
+function final_test
+{
+	local file="../tests/optimize/commonsubexpr.p0"
+	compile $file
+	local output=$(yes 12 | $SPIM -file out.s | tail -n1)
+
+	echo "The following numbers should be kind of equal:"
+	echo "Expected: 13.44827557"
+	echo "Program : $output"
+}
+
+function compile
+{
+	$COMP < $1 > /dev/null 2>&1
+}
+
+function calculate_percentage
+{
+	local result
+	if [ "$2" -eq 0 ]
+	then
+		result="100.0"
+	else
+		result=$(echo "scale=2; ($1 * 100) / $2" | bc)
+	fi
+
+	echo "$result %"
+}
+
+main

@@ -1,0 +1,14 @@
+program a;
+
+var
+  een: integer;
+
+procedure twee;
+
+begin
+  writeinteger(1)
+end;
+
+begin
+  een := twee
+end.

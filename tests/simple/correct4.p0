@@ -1,0 +1,15 @@
+{ Stupid program to test line
+   numbers.
+
+
+}
+program queenrulez;
+  {
+     snafu
+  }
+
+var
+  get: real; { Line 12 }
+
+begin
+end.

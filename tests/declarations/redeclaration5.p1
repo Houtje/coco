@@ -1,0 +1,19 @@
+{ This program is correct wrt the context-free grammar;
+  in the context-sensitive grammar it is incorrect.
+}
+
+program rontest;
+
+var
+	rontest,
+	ray	:	integer;
+var	raytest	:	real;
+var	rontest	:	real;      { declared earlier }
+
+begin
+	ray := 35;
+	ray := 33;
+	rontest := -1.5
+end
+
+.

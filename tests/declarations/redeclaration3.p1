@@ -1,0 +1,19 @@
+{ This program is correct wrt the CF grammar }
+
+program yetanothertest;
+
+var
+  a: real;
+
+procedure foo(c,b: integer);
+var
+  b: real; { b is already declared as a parameter }
+var
+  c: integer; { c is already declared as a parameter }
+begin
+  writeinteger(b)
+end;
+
+begin
+  a := 0
+end.

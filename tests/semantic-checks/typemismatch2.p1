@@ -1,0 +1,8 @@
+program realwordtint;
+
+var a : integer;
+var b : real;
+
+begin
+  a := b
+end.

@@ -1,0 +1,18 @@
+program calculatortje;
+
+var
+  a, a1, a2: integer;
+
+function plus(a, b: integer): integer;
+
+begin
+  plus := a + b
+end;
+
+begin
+  a1 := readinteger;
+  a2 := readinteger;
+  writeinteger(a1);
+  writeinteger(a2);
+  writeinteger(plus(a1,a2))
+end.

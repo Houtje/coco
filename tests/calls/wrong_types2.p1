@@ -1,0 +1,19 @@
+program om;
+
+var 
+  a, b, c: integer;
+var
+  d, e: real;
+
+procedure junk(foo, bar: integer);
+
+begin
+  bar := foo
+end;
+
+begin
+  { error
+    junk: integer x integer -> void
+    call: real x real -> void }
+  junk(d, e)
+end.

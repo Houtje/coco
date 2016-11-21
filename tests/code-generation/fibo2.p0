@@ -1,0 +1,30 @@
+program fibonee;
+
+var
+  hlp: integer;
+
+function fibo(i: integer): integer;
+
+var hlp1, hlp2: integer;
+
+begin
+  writeinteger(i);
+  if (i <= 1) then
+  begin
+    { writeinteger(-1); }
+    fibo := 1
+  end
+  else
+  begin
+    hlp1 := fibo(i-1);
+    hlp2 := fibo(i-2);
+    { writeinteger(-(hlp1+hlp2)); }   
+    fibo := hlp1 + hlp2
+  end
+end;
+
+
+begin
+  hlp := fibo(12);
+  writeinteger(hlp)
+end.

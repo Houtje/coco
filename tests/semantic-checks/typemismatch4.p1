@@ -1,0 +1,14 @@
+program a;
+
+var
+  b: integer;
+
+function blaah: real;
+
+begin
+  blaah := 3.5
+end;
+
+begin
+  b := blaah
+end.

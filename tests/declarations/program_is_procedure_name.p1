@@ -1,0 +1,20 @@
+{ In dit programma is er een procedure met dezelfde naam als het
+  programma zelf: controle of dat wordt toegestaan (mag niet)   }
+
+program prgisprocname;
+
+var j : integer;
+
+
+{***************************************************}
+procedure prgisprocname(i: integer);
+
+begin
+  i := 5
+end;
+
+
+{Hoofdprogramma}
+begin
+  prgisprocname(j)
+end.

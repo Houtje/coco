@@ -1,0 +1,12 @@
+program bits;
+
+var
+ a: integer;
+var
+ f: real;
+
+begin
+    a := not f;
+    a := a or f;
+    writeinteger (a)
+end.

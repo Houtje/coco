@@ -1,0 +1,10 @@
+{ This program is correct wrt the CF grammar }
+
+program a;
+
+var
+  a: real; { Already defined }
+
+begin
+  a := 0
+end.

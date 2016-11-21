@@ -1,0 +1,10 @@
+program a;
+
+var
+  blaah: integer;
+var
+  bleuh: real;
+
+begin
+  blaah := bleuh + blaah
+end.

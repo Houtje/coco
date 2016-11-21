@@ -1,0 +1,11 @@
+program unarplus;
+
+var a,b,c,d,e :integer;
+var f,g,h,i,j :real;
+
+begin
+  i := f div b;
+  i := b div f;
+  i := f div g;
+  f := b/c
+end.

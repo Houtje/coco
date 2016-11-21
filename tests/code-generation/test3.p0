@@ -1,0 +1,21 @@
+program diep;
+
+var
+  c: integer;
+
+procedure proc2;
+
+begin
+ c := 64
+end;
+
+procedure proc1;
+
+begin
+  proc2
+end;
+
+begin
+ proc1;
+ writeinteger(c)
+end.

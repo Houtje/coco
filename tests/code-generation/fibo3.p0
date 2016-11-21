@@ -1,0 +1,19 @@
+program fibonee;
+
+var
+  hlp: integer;
+
+function fibo(i: integer): integer;
+
+begin
+  writeinteger(i);
+  if (i <= 1) then
+    fibo := 1
+  else
+    fibo := fibo(i-1) + fibo(i-2)
+end;
+
+begin
+  hlp := fibo(4);
+  writeinteger(hlp) 
+end.

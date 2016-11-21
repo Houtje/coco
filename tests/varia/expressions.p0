@@ -1,0 +1,15 @@
+program unarplus;
+
+var a,b,c,d,e :integer;
+var f,g,h,i,j :real;
+
+begin
+  b := 2; { not needed, but otherwise integer div by zero }
+
+  a := a - (- a);
+  e := c or b;
+
+  f := g*h;
+  i := a div b;
+  f := b/c { no type problem: coercion }
+end.

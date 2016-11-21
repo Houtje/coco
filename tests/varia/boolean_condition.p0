@@ -1,0 +1,9 @@
+program weeh;
+
+var
+ a: integer;
+
+begin
+  if (a + 3) > 4 then
+    a := 4
+end.

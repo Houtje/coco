@@ -1,0 +1,12 @@
+program plus;
+
+var a, b, c: integer;
+
+procedure kat(k: integer);
+begin
+    k := k + 3
+end;
+
+begin
+    a := b*c + 7*c
+end.

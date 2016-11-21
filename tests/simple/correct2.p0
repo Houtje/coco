@@ -1,0 +1,17 @@
+{This is a correct program; it is intended to test that the lexical 
+ analyzer correctly skips comment}
+
+program example;
+
+var x, y: integer;
+function gcd(a,b: {Yabadabbadooh!} integer): integer;
+begin
+    if b = 0 then{tokensep}gcd := a
+    else gcd := gcd(b, a mod b {Viva Euclid})
+end;
+
+begin
+    x := readinteger;
+    y := readinteger;
+    writeinteger(gcd(x, y))
+end.

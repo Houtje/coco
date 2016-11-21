@@ -1,0 +1,15 @@
+program demo;
+
+function drieentwintig(i : integer): integer;
+
+begin
+  drieentwintig := 23
+end;
+
+begin
+  writeinteger(drieentwintig(42));
+  writeinteger(7 div 3);
+  writeinteger(7 mod 3);
+  if (10/5 = 20/10) then
+    writeinteger(666)
+end.

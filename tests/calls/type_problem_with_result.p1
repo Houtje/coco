@@ -1,0 +1,20 @@
+program towel;
+
+var
+  zaphod,
+  breeblebox: real;
+var
+  mice: integer;
+
+function guide(arthur, ford: real): real;
+
+begin
+  guide := arthur + ford
+end;
+
+begin
+  { error
+    guide: real x real -> real
+    call: real x real -> integer }
+  mice := guide(zaphod, breeblebox)
+end.

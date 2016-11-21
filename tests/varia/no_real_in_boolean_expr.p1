@@ -1,0 +1,8 @@
+program a;
+
+var
+  b, c, d: real;
+
+begin
+  d := b or c
+end.

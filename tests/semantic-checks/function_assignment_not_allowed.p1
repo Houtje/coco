@@ -1,0 +1,23 @@
+program a;
+
+var
+  b: integer;
+
+function fac(c: integer): integer;
+
+begin
+  if (c = 0) then 
+    fac := 1 
+  else
+    fac := fac(c-1) * c
+end;
+
+function plus(d,e: integer): integer;
+
+begin
+  fac := d+e
+end;
+
+begin
+  b := 3
+end.

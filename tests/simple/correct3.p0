@@ -1,0 +1,17 @@
+{ This program is correct }
+
+program yetanothertest;
+
+var
+  a: real;
+
+procedure foo(b: integer);
+var
+  a: integer;
+begin
+  writeinteger(b)
+end;
+
+begin
+  a := 0
+end.

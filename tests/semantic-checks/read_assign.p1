@@ -1,0 +1,15 @@
+program rontest;
+
+var a,b : integer;
+var c,d : real;
+
+
+begin
+  a := 4;
+  b := 6;
+  c := 3.5;
+
+  while c < 10 do
+    c := c+1;
+  readinteger := c
+end.

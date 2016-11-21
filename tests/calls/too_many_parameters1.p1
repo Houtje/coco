@@ -1,0 +1,19 @@
+program towel;
+
+var
+  zaphod,
+  breeblebox,
+  adams: integer;
+
+function guide(arthur, ford: integer): integer;
+
+begin
+  guide := arthur + ford
+end;
+
+begin
+  { Error: 
+    guide: integer x integer -> integer
+    call:  integer x integer x integer -> integer }
+  zaphod := guide(zaphod, breeblebox, adams)
+end.

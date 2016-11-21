@@ -1,0 +1,19 @@
+program calculatortje;
+
+var
+  foo,
+  bar: integer;
+ 
+function plusi(a, b: integer): integer;
+
+begin
+  plusi := a + b
+end;
+
+begin
+  foo := readinteger;
+  writeinteger(foo);
+  bar := readinteger;
+  writeinteger(bar);
+  writeinteger(plusi(foo,bar))
+end.

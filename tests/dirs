@@ -1,0 +1,8 @@
+../tests/calls/
+../tests/declarations/
+../tests/semantic-checks/
+../tests/varia/
+../tests/code-generation/
+../tests/simple/
+../tests/wrongsyntax/
+../tests/optimize/

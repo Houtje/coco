@@ -1,0 +1,9 @@
+program plus;
+
+var x, y, res: integer;
+
+begin
+    x := 3;
+    y := 4;
+    res := x - y
+end.

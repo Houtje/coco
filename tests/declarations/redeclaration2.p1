@@ -1,0 +1,18 @@
+{ This program is correct wrt the CF grammar. }
+
+program example;
+
+var x, y, x: integer; { x is redeclared within one var statement }
+function gcd(a,b: integer): integer;
+var c: integer; 
+var d,e,f: integer;
+var c: integer; { c is redeclared }
+begin
+    if b = 0 then gcd := a
+    else gcd := gcd(b, a mod b)
+end;
+
+begin
+    x := readinteger; y := readinteger;
+    writeinteger(gcd(x, y))
+end.

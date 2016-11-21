@@ -1,0 +1,19 @@
+program hoop;
+
+var
+  a: integer;
+
+function fac(i: integer): integer;
+
+begin
+  writeinteger(i);
+  if (i = 0) then
+    fac := 1
+  else 
+    fac := i * fac(i-1)
+end;
+
+begin
+  a := fac(5);
+  writeinteger(a)
+end.

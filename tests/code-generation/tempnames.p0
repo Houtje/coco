@@ -1,0 +1,16 @@
+program tempnamesmess;
+
+function temp(i: integer): integer;
+
+var temp1, t1, tmp1, t: integer;
+begin
+  temp1 := 42;
+  t1 := temp1 + temp1;
+  tmp1 := t1 div i;
+  writeinteger(t);
+  temp := t
+end;
+
+begin
+  writeinteger(temp(2))
+end.

@@ -1,0 +1,48 @@
+program fibonee;
+
+var
+  hlp: integer;
+
+function fibo(i: integer): integer;
+
+begin
+  writeinteger(i);
+  if (i <= 1) then
+    fibo := 1
+  else
+    fibo := fibo(i-1) + fibo(i-2)
+end;
+
+function plus(i: integer): integer;
+
+begin
+  plus := i + 1
+end;
+
+function geennaam(i: integer): integer;
+
+begin
+  if (i > 0) then
+    geennaam := 1 + geennaam(i-1)
+  else
+    geennaam := 0
+end;
+
+function dubbeltest(i: integer): integer;
+
+begin
+  if (i = 0) then
+    dubbeltest := 23
+  else
+    dubbeltest := dubbeltest(0) + dubbeltest(0)
+end;
+
+
+begin
+  hlp := fibo(4);
+  writereal(3.5); 
+  writeinteger(hlp);
+  writeinteger(plus(4));
+  writeinteger(geennaam(6));
+  writeinteger(dubbeltest(666))
+end.
